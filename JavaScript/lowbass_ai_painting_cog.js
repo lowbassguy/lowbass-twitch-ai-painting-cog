@@ -32,6 +32,7 @@ function initializePaintingFeature(client) {
     // Check if the user is the broadcaster; if not, deny permission
     if (username.toLowerCase() !== BROADCASTER.toLowerCase()) {
       console.log("[PaintingFeature] Permission denied.");
+      client.say(channel, `Sorry ${username}, only the broadcaster can use this command.`);
       return;
     }
 

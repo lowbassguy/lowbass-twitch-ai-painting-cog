@@ -45,9 +45,10 @@ class PaintingCog(commands.Cog):
     async def paint_command(self, ctx: commands.Context):
         print(f"[PaintingCog] Received !paint command from: {ctx.author.name}")
 
-        # Only allow moderators or the broadcaster to use the !paint command
-        if not (ctx.author.is_mod or ctx.author.name.lower() == self.broadcaster.lower()):
+        # Only allow the broadcaster to use the !paint command
+        if ctx.author.name.lower() != self.broadcaster.lower():
             print("[PaintingCog] Permission denied for user.")
+            await ctx.send(f"Sorry {ctx.author.name}, only the broadcaster can use this command.")
             return
 
         # Parse the command for user and prompt
@@ -105,4 +106,3 @@ class PaintingCog(commands.Cog):
         print(f"[PaintingCog] Upload complete: {uploaded_image.link}")
         # Return the Imgur URL of the uploaded image
         return uploaded_image.link
-
