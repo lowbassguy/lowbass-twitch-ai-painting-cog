@@ -1,5 +1,7 @@
 # Lowbass AI Painting Cog
 
+> **Note:** This is my first public/open-source project! The code is largely untested, may or may not work as expected, and is provided as-is. Please use at your own risk—I can't take responsibility for any issues or damages that may result. Feedback and suggestions are welcome!
+
 A modular, AI-powered painting feature for Twitch bots, available in three flavors:
 - **Python (TwitchIO)**
 - **JavaScript (tmi.js)**
