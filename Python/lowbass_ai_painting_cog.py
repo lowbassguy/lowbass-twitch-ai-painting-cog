@@ -1,20 +1,18 @@
 """
 lowbass_ai_painting_cog.py
 -------------------------
-Lowbass' AI Painting Cog – a **stand‑alone** TwitchIO extension that adds an AI‑powered “painting” feature to any existing bot.
+Lowbass' AI Painting Cog - a **stand-alone** TwitchIO extension that adds an AI-powered "painting" feature to any existing bot.
 
 Features
 ~~~~~~~~
-* **Admin‑only !paint command** – broadcasters & mods can generate paintings on demand.
+* **Admin-only !paint command** - broadcasters & mods can generate paintings on demand.
 
 Environment variables
 ~~~~~~~~~~~~~~~~~~~~~
-```
-OPENAI_API_KEY       # required – key for OpenAI Images API
-IMGUR_CLIENT_ID      # required – Imgur API client ID
-IMGUR_ALBUM_ID       # optional – album to contain generated paintings
-BOT_BROADCASTER      # required – Twitch username of the broadcaster (for permission checks)
-```
+OPENAI_API_KEY       # required - key for OpenAI Images API
+IMGUR_CLIENT_ID      # required - Imgur API client ID
+IMGUR_ALBUM_ID       # optional - album to contain generated paintings
+BOT_BROADCASTER      # required - Twitch username of the broadcaster (for permission checks)
 """
 
 import os
@@ -107,3 +105,4 @@ class PaintingCog(commands.Cog):
         print(f"[PaintingCog] Upload complete: {uploaded_image.link}")
         # Return the Imgur URL of the uploaded image
         return uploaded_image.link
+
